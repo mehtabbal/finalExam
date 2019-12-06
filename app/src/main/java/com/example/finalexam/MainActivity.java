@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 String selectedFromList = lv.getItemAtPosition(position).toString();
                 Intent intent;
                 intent = new Intent(MainActivity.this, onClick.class);
-                intent.putExtra("picList", selectedFromList);
+                intent.putExtra("picList", list.get(position));
                 startActivity(intent);
 
             }
